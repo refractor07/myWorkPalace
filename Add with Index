@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      System.out.println("enter the array size");
+      int n =sc.nextInt();
+      if(n<5) {
+          System.out.println("Array size "+ n+"is too low");
+      }
+      else if (n>10) {
+          System.out.println("Array size"+ n+ "is too high");
+      }
+      else {
+          int arr[] = new int[n];
+          System.out.println("Enter the elements");
+          for(int i=0;i<n;i++){
+              arr[i]=sc.nextInt();          
+              
+          }
+      
+      
+      int ele= arr[0],flag=0;
+      for(int i=0;i<n;i++ ){
+          if(arr[i]==ele){
+              
+          }
+          else {
+              flag=1;
+          }
+      }
+      
+      int max=arr[0];
+      int max_index=0;
+      for(int i=0; i<n;i++) {
+          if(arr[i]>max) {
+              max= arr[i];
+              max_index=i;
+          }
+      }
+      
+      if(flag==1) {
+          for (int i=0;i<n;i++) {
+              arr[i] = arr[i]+ max_index;
+              System.out.println(arr[i]);
+          }
+      }
+       else {
+           System.out.println("These"+ n+ "value contain the same elements");
+       }
+       
+    }
+    
+}
+}
